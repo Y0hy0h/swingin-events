@@ -33,7 +33,7 @@ define( 'SWINGIN_EVENTS_VERSION', '1.0.0' );
  * This action is documented in includes/class-swingin-events-activator.php
  */
 function activate_swingin_events() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-swingin-events-activator.php';
 	Swingin_Events_Activator::activate();
 }
 
@@ -42,7 +42,7 @@ function activate_swingin_events() {
  * This action is documented in includes/class-swingin-events-deactivator.php
  */
 function deactivate_swingin_events() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-deactivator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-swingin-events-deactivator.php';
 	Swingin_Events_Deactivator::deactivate();
 }
 
@@ -53,7 +53,7 @@ register_deactivation_hook( __FILE__, 'deactivate_swingin_events' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-swingin_events.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-swingin-events.php';
 
 /**
  * Begins execution of the plugin.

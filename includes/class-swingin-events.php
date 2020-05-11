@@ -25,7 +25,6 @@
  * @since      1.0.0
  * @package    Swingin_Events
  * @subpackage Swingin_Events/includes
- * @author     Your Name <email@example.com>
  */
 class Swingin_Events {
 

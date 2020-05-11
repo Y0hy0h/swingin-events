@@ -30,7 +30,10 @@ class Swingin_Events_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-swingin-events-database.php';
 
+        $db = new Swingin_Events_Database();
+        $db->up();
 	}
 
 }
