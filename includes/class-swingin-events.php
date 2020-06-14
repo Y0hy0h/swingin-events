@@ -172,7 +172,22 @@ class Swingin_Events {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+        $this->loader->add_action("init", $this, "register_custom_post_type");
+
 	}
+
+    public function register_custom_post_type() {
+        register_post_type('swev_events',
+            array(
+                'labels'      => array(
+                    'name'          => __('Events', 'textdomain'),
+                    'singular_name' => __('Event', 'textdomain'),
+                ),
+                'public'      => true,
+                'has_archive' => true,
+            )
+        );
+    }
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
