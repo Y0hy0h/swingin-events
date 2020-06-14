@@ -29,3 +29,9 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+
+// Remove custom tables.
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-swingin-events-database.php';
+
+$db = new Swingin_Events_Database();
+$db->down();

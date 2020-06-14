@@ -30,10 +30,6 @@ class Swingin_Events_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-swingin-events-database.php';
-
-        $db = new Swingin_Events_Database();
-        $db->down();
 	}
 
 }
